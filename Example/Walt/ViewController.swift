@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Walt
 
 class ViewController: UIViewController {
 

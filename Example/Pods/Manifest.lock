@@ -1,0 +1,16 @@
+PODS:
+  - Walt (0.1.0)
+
+DEPENDENCIES:
+  - Walt (from `../`)
+
+EXTERNAL SOURCES:
+  Walt:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Walt: 89534b320221ec69bbc573f72dcc48dd38b55006
+
+PODFILE CHECKSUM: 8b5dd964b592397bb40c328cb1e38efd45f041aa
+
+COCOAPODS: 1.1.0.rc.2

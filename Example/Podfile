@@ -6,6 +6,5 @@ target 'Walt_Example' do
   target 'Walt_Tests' do
     inherit! :search_paths
 
-    
   end
 end

@@ -1,0 +1,6 @@
+framework module Pods_Walt_Example {
+  umbrella header "Pods-Walt_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

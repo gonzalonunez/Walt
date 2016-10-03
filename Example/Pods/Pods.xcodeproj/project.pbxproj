@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09F0CBA76A24DBD1D945631084E0EC14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */; };
+		1C62B0BF97E9307783C9917C81E5203E /* Pods-Walt_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 119AC94553D55BD375605F0FEFC2C560 /* Pods-Walt_Example-dummy.m */; };
+		1FA767B695618EF08B533EA1212746C1 /* Walt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */; };
+		52C1CA2C09B9F56C87D49CCFD62DFB5D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A34FFE68672D093C4E3A48740A4753F /* CoreMedia.framework */; };
+		6666AD73DBBBB9B3D7A3C7AAF91A39E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2623527F7551A8306C74F20CE7E94A61 /* AVFoundation.framework */; };
+		6A6E48C23116CE8855052FC0D56ACEC4 /* Pods-Walt_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9179E6F472ECBC865B173F21E87DE546 /* Pods-Walt_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7347572B7B1D5E497E3B3FB27E470D60 /* Pods-Walt_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB4A7A33C6B5C5B9ED252510618E5F5C /* Pods-Walt_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A2AD8DC24ACB6BE4DA9323BA9B445B6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D61AC3F3EF7FFECA7E833AC58109A80 /* MobileCoreServices.framework */; };
+		A08A56EB00F5B0E9C72269D016FB8E7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
+		A72EEA53A64AD9EE9E34A1459CCDD21C /* Pods-Walt_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */; };
+		CBB8081058914F808118DEAE78B075D4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */; };
+		D34267FFE4CD5F74F92865AECA3D1059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
+		D57535E498ECD810A0E1A0ED516639D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090EC2915ADE5B6DEC94DF4E56E0DD3A /* QuartzCore.framework */; };
+		E0E80300C787970C21C5B9A721E99502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
+		E686DA142811BF677483D967C6D3A0F1 /* Walt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */; };
+		E8EB25B42E82B5C914D86C13839156FC /* Walt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6D7BFDA324685E4BFD24CFC657BA769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */; };
+		FE2A2EBB9030734BD0CD2BB56B3B43D3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA6DA4FBEE0FE1B4ECFF280500883D /* ImageIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE90C4832E9FDB4EFDD0B5F97E54E4F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 835CCC4F13289FF6A50B3EAC2925D4ED;
+			remoteInfo = Walt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		090EC2915ADE5B6DEC94DF4E56E0DD3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		0967B8D396AFE65CB926A9645714224D /* Pods_Walt_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D5341F339E06A50461B41F5223729F9 /* Pods-Walt_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Walt_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		119AC94553D55BD375605F0FEFC2C560 /* Pods-Walt_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Walt_Example-dummy.m"; sourceTree = "<group>"; };
+		1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Walt.xcconfig; sourceTree = "<group>"; };
+		1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Walt.swift; sourceTree = "<group>"; };
+		163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Walt_Tests-dummy.m"; sourceTree = "<group>"; };
+		1A34FFE68672D093C4E3A48740A4753F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		22E860C9CEE542E9EE749B41538B8BDD /* Walt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Walt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2623527F7551A8306C74F20CE7E94A61 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2F3E269E1B68BD6B2AF8DDEA948B3886 /* Pods-Walt_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Walt_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		311D04E957B89DAC4E9D02BB6C29F2D1 /* Pods-Walt_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Walt_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		451F36A9C257508FC106802D5AAAFE11 /* Pods_Walt_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BD791E005DD5743B0A79B1E97BB2AF1 /* Pods-Walt_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Tests-resources.sh"; sourceTree = "<group>"; };
+		60315161FE6789FC670C7F7C4371DA24 /* Pods-Walt_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-umbrella.h"; sourceTree = "<group>"; };
+		6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
+		736AA101F367B8E674A3C0CD2D91A2B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78D01901E9F527DD68770A673A4EC766 /* Pods-Walt_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt_Tests.modulemap"; sourceTree = "<group>"; };
+		795137E3D01C3D7FD8D94B575C25B572 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ACE0FB7DCE5291AF304040C54679D88 /* Pods-Walt_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Example-resources.sh"; sourceTree = "<group>"; };
+		7B0FD7941F2600189DBE52A96318B98F /* Walt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-prefix.pch"; sourceTree = "<group>"; };
+		7ECA6DA4FBEE0FE1B4ECFF280500883D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		8511E09C5F5CDA0DC168C7C6C507B88F /* Pods-Walt_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		8598AB919912D0059F7DE74B25CC10BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		864FF5BC9CE29FDD3A48B14B158A3178 /* Pods-Walt_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8D61AC3F3EF7FFECA7E833AC58109A80 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		9046713E8D0AE73FE2E6A30C180BB793 /* Walt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Walt.modulemap; sourceTree = "<group>"; };
+		9179E6F472ECBC865B173F21E87DE546 /* Pods-Walt_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt_Tests-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0F49DDD5590FA5111146220DFCA56E5 /* Pods-Walt_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt_Example.modulemap"; sourceTree = "<group>"; };
+		A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.release.xcconfig"; sourceTree = "<group>"; };
+		BB4A7A33C6B5C5B9ED252510618E5F5C /* Pods-Walt_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt_Example-umbrella.h"; sourceTree = "<group>"; };
+		BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Walt-dummy.m"; sourceTree = "<group>"; };
+		BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		DB3F3D56B27DB8E5EFEACF6BEA65D2AA /* Pods-Walt_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Walt_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FD59DC492A587AD7D296C70B559F18AA /* Pods-Walt_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Example-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D7980C0E0DEFFB6A096D8362DDA1A37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A08A56EB00F5B0E9C72269D016FB8E7A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99354F8750ED6F9705A524591B6BA1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0E80300C787970C21C5B9A721E99502 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6C3E33E301C1352F5C4BD5347915CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6666AD73DBBBB9B3D7A3C7AAF91A39E1 /* AVFoundation.framework in Frameworks */,
+				F6D7BFDA324685E4BFD24CFC657BA769 /* CoreGraphics.framework in Frameworks */,
+				52C1CA2C09B9F56C87D49CCFD62DFB5D /* CoreMedia.framework in Frameworks */,
+				D34267FFE4CD5F74F92865AECA3D1059 /* Foundation.framework in Frameworks */,
+				FE2A2EBB9030734BD0CD2BB56B3B43D3 /* ImageIO.framework in Frameworks */,
+				9A2AD8DC24ACB6BE4DA9323BA9B445B6 /* MobileCoreServices.framework in Frameworks */,
+				CBB8081058914F808118DEAE78B075D4 /* Photos.framework in Frameworks */,
+				D57535E498ECD810A0E1A0ED516639D6 /* QuartzCore.framework in Frameworks */,
+				09F0CBA76A24DBD1D945631084E0EC14 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		096C23FC621D8A39076C38687A007681 /* Walt */ = {
+			isa = PBXGroup;
+			children = (
+				A3A4A13D15952331CBEFEE92392E37FE /* Support Files */,
+				37787A7FF60F7647383DE07B03E69A65 /* Walt */,
+			);
+			name = Walt;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		1670D7DCD85F1AECDCA142574B76100F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				451F36A9C257508FC106802D5AAAFE11 /* Pods_Walt_Example.framework */,
+				0967B8D396AFE65CB926A9645714224D /* Pods_Walt_Tests.framework */,
+				22E860C9CEE542E9EE749B41538B8BDD /* Walt.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A58E3E710094F3C7B8C5C371BE326CC /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37787A7FF60F7647383DE07B03E69A65 /* Walt */ = {
+			isa = PBXGroup;
+			children = (
+				EF0417DC2628670F8FB79BBA6C598F60 /* Source */,
+			);
+			path = Walt;
+			sourceTree = "<group>";
+		};
+		3E6147A97B40F5B14E88FF5E79BC5151 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61452212B7BB01AEA04729513392D858 /* Pods-Walt_Example */,
+				E245E0F1677FB36718D0AAA022B4100F /* Pods-Walt_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4A58E3E710094F3C7B8C5C371BE326CC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2623527F7551A8306C74F20CE7E94A61 /* AVFoundation.framework */,
+				C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */,
+				1A34FFE68672D093C4E3A48740A4753F /* CoreMedia.framework */,
+				2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */,
+				7ECA6DA4FBEE0FE1B4ECFF280500883D /* ImageIO.framework */,
+				8D61AC3F3EF7FFECA7E833AC58109A80 /* MobileCoreServices.framework */,
+				6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */,
+				090EC2915ADE5B6DEC94DF4E56E0DD3A /* QuartzCore.framework */,
+				BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		61452212B7BB01AEA04729513392D858 /* Pods-Walt_Example */ = {
+			isa = PBXGroup;
+			children = (
+				8598AB919912D0059F7DE74B25CC10BE /* Info.plist */,
+				A0F49DDD5590FA5111146220DFCA56E5 /* Pods-Walt_Example.modulemap */,
+				DB3F3D56B27DB8E5EFEACF6BEA65D2AA /* Pods-Walt_Example-acknowledgements.markdown */,
+				0D5341F339E06A50461B41F5223729F9 /* Pods-Walt_Example-acknowledgements.plist */,
+				119AC94553D55BD375605F0FEFC2C560 /* Pods-Walt_Example-dummy.m */,
+				FD59DC492A587AD7D296C70B559F18AA /* Pods-Walt_Example-frameworks.sh */,
+				7ACE0FB7DCE5291AF304040C54679D88 /* Pods-Walt_Example-resources.sh */,
+				BB4A7A33C6B5C5B9ED252510618E5F5C /* Pods-Walt_Example-umbrella.h */,
+				864FF5BC9CE29FDD3A48B14B158A3178 /* Pods-Walt_Example.debug.xcconfig */,
+				AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */,
+			);
+			name = "Pods-Walt_Example";
+			path = "Target Support Files/Pods-Walt_Example";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				847482F4FBF3309F98BA294C540A3ADD /* Development Pods */,
+				24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */,
+				1670D7DCD85F1AECDCA142574B76100F /* Products */,
+				3E6147A97B40F5B14E88FF5E79BC5151 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		847482F4FBF3309F98BA294C540A3ADD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096C23FC621D8A39076C38687A007681 /* Walt */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A3A4A13D15952331CBEFEE92392E37FE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				795137E3D01C3D7FD8D94B575C25B572 /* Info.plist */,
+				9046713E8D0AE73FE2E6A30C180BB793 /* Walt.modulemap */,
+				1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */,
+				BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */,
+				7B0FD7941F2600189DBE52A96318B98F /* Walt-prefix.pch */,
+				6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Walt";
+			sourceTree = "<group>";
+		};
+		E245E0F1677FB36718D0AAA022B4100F /* Pods-Walt_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				736AA101F367B8E674A3C0CD2D91A2B4 /* Info.plist */,
+				78D01901E9F527DD68770A673A4EC766 /* Pods-Walt_Tests.modulemap */,
+				311D04E957B89DAC4E9D02BB6C29F2D1 /* Pods-Walt_Tests-acknowledgements.markdown */,
+				2F3E269E1B68BD6B2AF8DDEA948B3886 /* Pods-Walt_Tests-acknowledgements.plist */,
+				163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */,
+				8511E09C5F5CDA0DC168C7C6C507B88F /* Pods-Walt_Tests-frameworks.sh */,
+				5BD791E005DD5743B0A79B1E97BB2AF1 /* Pods-Walt_Tests-resources.sh */,
+				9179E6F472ECBC865B173F21E87DE546 /* Pods-Walt_Tests-umbrella.h */,
+				A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */,
+				60315161FE6789FC670C7F7C4371DA24 /* Pods-Walt_Tests.release.xcconfig */,
+			);
+			name = "Pods-Walt_Tests";
+			path = "Target Support Files/Pods-Walt_Tests";
+			sourceTree = "<group>";
+		};
+		EF0417DC2628670F8FB79BBA6C598F60 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		31AC5F0C5B38992D8E492AFC003C23E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6E48C23116CE8855052FC0D56ACEC4 /* Pods-Walt_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39D0173F0DC529E4960067E41BB30508 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347572B7B1D5E497E3B3FB27E470D60 /* Pods-Walt_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F991E7C289DA0959EB66F223951514D2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EB25B42E82B5C914D86C13839156FC /* Walt-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		835CCC4F13289FF6A50B3EAC2925D4ED /* Walt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCFBB82EF5DCA14AC517D8C1506F896A /* Build configuration list for PBXNativeTarget "Walt" */;
+			buildPhases = (
+				75CE83520E4354A0DDA4EA48A095C2A6 /* Sources */,
+				EA6C3E33E301C1352F5C4BD5347915CC /* Frameworks */,
+				F991E7C289DA0959EB66F223951514D2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Walt;
+			productName = Walt;
+			productReference = 22E860C9CEE542E9EE749B41538B8BDD /* Walt.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AE6CA44A47E7D42ABD0E14BCE74520FD /* Pods-Walt_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27BB7EF11E2F414BED19160FE4460510 /* Build configuration list for PBXNativeTarget "Pods-Walt_Tests" */;
+			buildPhases = (
+				31C9F70F4A27A8787C27B47FA8EEA8E0 /* Sources */,
+				C99354F8750ED6F9705A524591B6BA1D /* Frameworks */,
+				31AC5F0C5B38992D8E492AFC003C23E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Walt_Tests";
+			productName = "Pods-Walt_Tests";
+			productReference = 0967B8D396AFE65CB926A9645714224D /* Pods_Walt_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F18A6867D19F7158A3411D856BC1B78A /* Pods-Walt_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACCED1716EA9B666AC0CF96EBC091E8 /* Build configuration list for PBXNativeTarget "Pods-Walt_Example" */;
+			buildPhases = (
+				ACA7B7A7E54F76FF39023F881C8E4ABB /* Sources */,
+				5D7980C0E0DEFFB6A096D8362DDA1A37 /* Frameworks */,
+				39D0173F0DC529E4960067E41BB30508 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27AD049ACBA215A48CCEF5407FBCCF2E /* PBXTargetDependency */,
+			);
+			name = "Pods-Walt_Example";
+			productName = "Pods-Walt_Example";
+			productReference = 451F36A9C257508FC106802D5AAAFE11 /* Pods_Walt_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					835CCC4F13289FF6A50B3EAC2925D4ED = {
+						LastSwiftMigration = 0800;
+					};
+					AE6CA44A47E7D42ABD0E14BCE74520FD = {
+						LastSwiftMigration = 0800;
+					};
+					F18A6867D19F7158A3411D856BC1B78A = {
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1670D7DCD85F1AECDCA142574B76100F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F18A6867D19F7158A3411D856BC1B78A /* Pods-Walt_Example */,
+				AE6CA44A47E7D42ABD0E14BCE74520FD /* Pods-Walt_Tests */,
+				835CCC4F13289FF6A50B3EAC2925D4ED /* Walt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31C9F70F4A27A8787C27B47FA8EEA8E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72EEA53A64AD9EE9E34A1459CCDD21C /* Pods-Walt_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75CE83520E4354A0DDA4EA48A095C2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FA767B695618EF08B533EA1212746C1 /* Walt-dummy.m in Sources */,
+				E686DA142811BF677483D967C6D3A0F1 /* Walt.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACA7B7A7E54F76FF39023F881C8E4ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C62B0BF97E9307783C9917C81E5203E /* Pods-Walt_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27AD049ACBA215A48CCEF5407FBCCF2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Walt;
+			target = 835CCC4F13289FF6A50B3EAC2925D4ED /* Walt */;
+			targetProxy = AE90C4832E9FDB4EFDD0B5F97E54E4F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		36B076A87087FF9751A782CE0127EA37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Walt_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Walt_Tests/Pods-Walt_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Walt_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		779680D57A33ABD33C87E345BDC12D42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Walt_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Walt_Example/Pods-Walt_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Walt_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9EE4A7E269DB62BAEC4D955DCDACC1DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 864FF5BC9CE29FDD3A48B14B158A3178 /* Pods-Walt_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Walt_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Walt_Example/Pods-Walt_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Walt_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF9811D5747A8637C83C3BB5E15C79C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Walt/Walt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Walt/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Walt/Walt.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Walt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D826452980394B7DC65A57942570CA5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60315161FE6789FC670C7F7C4371DA24 /* Pods-Walt_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Walt_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Walt_Tests/Pods-Walt_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Walt_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC3E17363B5887F5CAB204FAA0DEBE1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Walt/Walt-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Walt/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Walt/Walt.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Walt;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27BB7EF11E2F414BED19160FE4460510 /* Build configuration list for PBXNativeTarget "Pods-Walt_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36B076A87087FF9751A782CE0127EA37 /* Debug */,
+				D826452980394B7DC65A57942570CA5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACCED1716EA9B666AC0CF96EBC091E8 /* Build configuration list for PBXNativeTarget "Pods-Walt_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EE4A7E269DB62BAEC4D955DCDACC1DB /* Debug */,
+				779680D57A33ABD33C87E345BDC12D42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCFBB82EF5DCA14AC517D8C1506F896A /* Build configuration list for PBXNativeTarget "Walt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC3E17363B5887F5CAB204FAA0DEBE1B /* Debug */,
+				BF9811D5747A8637C83C3BB5E15C79C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

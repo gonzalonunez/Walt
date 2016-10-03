@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Walt'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Walt.'
+  s.summary          = 'A Swift 3 library for creating gifs/videos from a series of images.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A Swift 3 library for creating gifs/videos from a series of images.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Walt'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.homepage         = 'https://github.com/gonzalonunez/Walt'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'gonzalonunez' => 'gonzi@tcpmiami.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Walt.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'gonzalonunez' => 'hello@gonzalonunez.me' }
+  s.source           = { :git => 'https://github.com/gonzalonunez/Walt.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/gonzalo__nunez'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'Walt/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Walt' => ['Walt/Assets/*.png']
-  # }
+  s.source_files = 'Walt/Source/**/*'
+  s.resources = 'Walt/Assets/**/*'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'UIKit', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'ImageIO', 'MobileCoreServices', 'Photos', 'QuartzCore'
 end
