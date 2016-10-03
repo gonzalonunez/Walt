@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		09F0CBA76A24DBD1D945631084E0EC14 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */; };
+		0BB17D0E38BBF7082F5BF34B1A8CF637 /* Walt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44E3A41493F00E054F4754EA8D08480 /* Walt.swift */; };
+		0DD56D5411ADC3FE6D9FF373F24806AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB75B90E6E700491599EE8552783F53 /* Assets.xcassets */; };
 		1C62B0BF97E9307783C9917C81E5203E /* Pods-Walt_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 119AC94553D55BD375605F0FEFC2C560 /* Pods-Walt_Example-dummy.m */; };
-		1FA767B695618EF08B533EA1212746C1 /* Walt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */; };
 		52C1CA2C09B9F56C87D49CCFD62DFB5D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A34FFE68672D093C4E3A48740A4753F /* CoreMedia.framework */; };
 		6666AD73DBBBB9B3D7A3C7AAF91A39E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2623527F7551A8306C74F20CE7E94A61 /* AVFoundation.framework */; };
 		6A6E48C23116CE8855052FC0D56ACEC4 /* Pods-Walt_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9179E6F472ECBC865B173F21E87DE546 /* Pods-Walt_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,12 +18,13 @@
 		9A2AD8DC24ACB6BE4DA9323BA9B445B6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D61AC3F3EF7FFECA7E833AC58109A80 /* MobileCoreServices.framework */; };
 		A08A56EB00F5B0E9C72269D016FB8E7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
 		A72EEA53A64AD9EE9E34A1459CCDD21C /* Pods-Walt_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */; };
+		AB397BB61DA2F8FF00AA0E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */; };
 		CBB8081058914F808118DEAE78B075D4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */; };
 		D34267FFE4CD5F74F92865AECA3D1059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
 		D57535E498ECD810A0E1A0ED516639D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090EC2915ADE5B6DEC94DF4E56E0DD3A /* QuartzCore.framework */; };
 		E0E80300C787970C21C5B9A721E99502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
-		E686DA142811BF677483D967C6D3A0F1 /* Walt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */; };
-		E8EB25B42E82B5C914D86C13839156FC /* Walt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E56988AC481CB01730B6F95519E8A564 /* Walt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CA6BA6814992EBCCA28DDD9E618910 /* Walt-dummy.m */; };
+		E8EB25B42E82B5C914D86C13839156FC /* Walt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9200728FBA44ED793ADFAD7BC67AA5 /* Walt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6D7BFDA324685E4BFD24CFC657BA769 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */; };
 		FE2A2EBB9030734BD0CD2BB56B3B43D3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ECA6DA4FBEE0FE1B4ECFF280500883D /* ImageIO.framework */; };
 /* End PBXBuildFile section */
@@ -42,8 +44,6 @@
 		0967B8D396AFE65CB926A9645714224D /* Pods_Walt_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D5341F339E06A50461B41F5223729F9 /* Pods-Walt_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Walt_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		119AC94553D55BD375605F0FEFC2C560 /* Pods-Walt_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Walt_Example-dummy.m"; sourceTree = "<group>"; };
-		1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Walt.xcconfig; sourceTree = "<group>"; };
-		1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Walt.swift; sourceTree = "<group>"; };
 		163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Walt_Tests-dummy.m"; sourceTree = "<group>"; };
 		1A34FFE68672D093C4E3A48740A4753F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
 		22E860C9CEE542E9EE749B41538B8BDD /* Walt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Walt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,33 +51,37 @@
 		2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		2F3E269E1B68BD6B2AF8DDEA948B3886 /* Pods-Walt_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Walt_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		311D04E957B89DAC4E9D02BB6C29F2D1 /* Pods-Walt_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Walt_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		36CA6BA6814992EBCCA28DDD9E618910 /* Walt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Walt-dummy.m"; sourceTree = "<group>"; };
+		3E72777D7927821C0E1FFE57AE594F7C /* Walt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-prefix.pch"; sourceTree = "<group>"; };
 		451F36A9C257508FC106802D5AAAFE11 /* Pods_Walt_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walt_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58C495166CFF4B01EE239821C15254CC /* Walt.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Walt.xcconfig; sourceTree = "<group>"; };
 		5BD791E005DD5743B0A79B1E97BB2AF1 /* Pods-Walt_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Tests-resources.sh"; sourceTree = "<group>"; };
+		600CBBAD328C668D1230B93CD082770F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60315161FE6789FC670C7F7C4371DA24 /* Pods-Walt_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-umbrella.h"; sourceTree = "<group>"; };
 		6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Photos.framework; sourceTree = DEVELOPER_DIR; };
 		736AA101F367B8E674A3C0CD2D91A2B4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78D01901E9F527DD68770A673A4EC766 /* Pods-Walt_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt_Tests.modulemap"; sourceTree = "<group>"; };
-		795137E3D01C3D7FD8D94B575C25B572 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ACE0FB7DCE5291AF304040C54679D88 /* Pods-Walt_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Example-resources.sh"; sourceTree = "<group>"; };
-		7B0FD7941F2600189DBE52A96318B98F /* Walt-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-prefix.pch"; sourceTree = "<group>"; };
 		7ECA6DA4FBEE0FE1B4ECFF280500883D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 		8511E09C5F5CDA0DC168C7C6C507B88F /* Pods-Walt_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		8598AB919912D0059F7DE74B25CC10BE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		864FF5BC9CE29FDD3A48B14B158A3178 /* Pods-Walt_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8D61AC3F3EF7FFECA7E833AC58109A80 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
-		9046713E8D0AE73FE2E6A30C180BB793 /* Walt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Walt.modulemap; sourceTree = "<group>"; };
 		9179E6F472ECBC865B173F21E87DE546 /* Pods-Walt_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		957601113D332E094C1A2FF1B9E716D6 /* Walt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Walt.modulemap; sourceTree = "<group>"; };
+		9CB75B90E6E700491599EE8552783F53 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0F49DDD5590FA5111146220DFCA56E5 /* Pods-Walt_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Walt_Example.modulemap"; sourceTree = "<group>"; };
+		A44E3A41493F00E054F4754EA8D08480 /* Walt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Walt.swift; sourceTree = "<group>"; };
 		A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.release.xcconfig"; sourceTree = "<group>"; };
+		AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB4A7A33C6B5C5B9ED252510618E5F5C /* Pods-Walt_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt_Example-umbrella.h"; sourceTree = "<group>"; };
-		BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Walt-dummy.m"; sourceTree = "<group>"; };
 		BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		DB3F3D56B27DB8E5EFEACF6BEA65D2AA /* Pods-Walt_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Walt_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FD59DC492A587AD7D296C70B559F18AA /* Pods-Walt_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Walt_Example-frameworks.sh"; sourceTree = "<group>"; };
+		FE9200728FBA44ED793ADFAD7BC67AA5 /* Walt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Walt-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,16 +120,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		096C23FC621D8A39076C38687A007681 /* Walt */ = {
-			isa = PBXGroup;
-			children = (
-				A3A4A13D15952331CBEFEE92392E37FE /* Support Files */,
-				37787A7FF60F7647383DE07B03E69A65 /* Walt */,
-			);
-			name = Walt;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		1670D7DCD85F1AECDCA142574B76100F /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +130,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		185D4DFE8C1D39F1C5CE7863222C508F /* Walt */ = {
+			isa = PBXGroup;
+			children = (
+				EB6AB90C05D032E8A80BAF1A73AFC0B2 /* Assets */,
+			);
+			path = Walt;
+			sourceTree = "<group>";
+		};
 		24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,12 +146,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		37787A7FF60F7647383DE07B03E69A65 /* Walt */ = {
+		3719814E21F51E62357857BA303A1B37 /* Walt */ = {
 			isa = PBXGroup;
 			children = (
-				EF0417DC2628670F8FB79BBA6C598F60 /* Source */,
+				D1B2036F09CED0A15E0E9BDF7D3F8A0A /* Resources */,
+				7A8CF52A1C36B3C80DBBCB8620DB281F /* Support Files */,
+				CD8712180FE2C2C02574201F94449834 /* Walt */,
 			);
-			path = Walt;
+			name = Walt;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		3E6147A97B40F5B14E88FF5E79BC5151 /* Targets Support Files */ = {
@@ -177,6 +182,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		5C3559327F43CF6A4F3C583A319C58BC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A44E3A41493F00E054F4754EA8D08480 /* Walt.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		61452212B7BB01AEA04729513392D858 /* Pods-Walt_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,37 +208,62 @@
 			path = "Target Support Files/Pods-Walt_Example";
 			sourceTree = "<group>";
 		};
+		7A8CF52A1C36B3C80DBBCB8620DB281F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				600CBBAD328C668D1230B93CD082770F /* Info.plist */,
+				957601113D332E094C1A2FF1B9E716D6 /* Walt.modulemap */,
+				58C495166CFF4B01EE239821C15254CC /* Walt.xcconfig */,
+				36CA6BA6814992EBCCA28DDD9E618910 /* Walt-dummy.m */,
+				3E72777D7927821C0E1FFE57AE594F7C /* Walt-prefix.pch */,
+				FE9200728FBA44ED793ADFAD7BC67AA5 /* Walt-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Walt";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				847482F4FBF3309F98BA294C540A3ADD /* Development Pods */,
+				9C3F81F24925A48E85EEF94AA0D138A0 /* Development Pods */,
 				24002A6670E6882ECD6250D3E60F9CB2 /* Frameworks */,
 				1670D7DCD85F1AECDCA142574B76100F /* Products */,
 				3E6147A97B40F5B14E88FF5E79BC5151 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		847482F4FBF3309F98BA294C540A3ADD /* Development Pods */ = {
+		9C3F81F24925A48E85EEF94AA0D138A0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				096C23FC621D8A39076C38687A007681 /* Walt */,
+				3719814E21F51E62357857BA303A1B37 /* Walt */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		A3A4A13D15952331CBEFEE92392E37FE /* Support Files */ = {
+		AB397BB21DA2F8FF00AA0E30 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				795137E3D01C3D7FD8D94B575C25B572 /* Info.plist */,
-				9046713E8D0AE73FE2E6A30C180BB793 /* Walt.modulemap */,
-				1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */,
-				BC2091A7F134C3061DBE8EDAF80C169D /* Walt-dummy.m */,
-				7B0FD7941F2600189DBE52A96318B98F /* Walt-prefix.pch */,
-				6B1EEC046D8F832F8CCB85BC6AFFA51D /* Walt-umbrella.h */,
+				AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Walt";
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CD8712180FE2C2C02574201F94449834 /* Walt */ = {
+			isa = PBXGroup;
+			children = (
+				5C3559327F43CF6A4F3C583A319C58BC /* Source */,
+				AB397BB21DA2F8FF00AA0E30 /* Assets */,
+			);
+			path = Walt;
+			sourceTree = "<group>";
+		};
+		D1B2036F09CED0A15E0E9BDF7D3F8A0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				185D4DFE8C1D39F1C5CE7863222C508F /* Walt */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E245E0F1677FB36718D0AAA022B4100F /* Pods-Walt_Tests */ = {
@@ -246,12 +284,12 @@
 			path = "Target Support Files/Pods-Walt_Tests";
 			sourceTree = "<group>";
 		};
-		EF0417DC2628670F8FB79BBA6C598F60 /* Source */ = {
+		EB6AB90C05D032E8A80BAF1A73AFC0B2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				1624F2D8706448ED272D0A9ACBA0E08C /* Walt.swift */,
+				9CB75B90E6E700491599EE8552783F53 /* Assets.xcassets */,
 			);
-			path = Source;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +326,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCFBB82EF5DCA14AC517D8C1506F896A /* Build configuration list for PBXNativeTarget "Walt" */;
 			buildPhases = (
-				75CE83520E4354A0DDA4EA48A095C2A6 /* Sources */,
+				32CDAC4A1FE3A56D978DE9EECD943FD9 /* Sources */,
 				EA6C3E33E301C1352F5C4BD5347915CC /* Frameworks */,
+				388BB4CEFBA23BCC781F1339C7FD39CB /* Resources */,
 				F991E7C289DA0959EB66F223951514D2 /* Headers */,
 			);
 			buildRules = (
@@ -344,17 +383,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					835CCC4F13289FF6A50B3EAC2925D4ED = {
-						LastSwiftMigration = 0800;
-					};
-					AE6CA44A47E7D42ABD0E14BCE74520FD = {
-						LastSwiftMigration = 0800;
-					};
-					F18A6867D19F7158A3411D856BC1B78A = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -375,6 +403,18 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		388BB4CEFBA23BCC781F1339C7FD39CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DD56D5411ADC3FE6D9FF373F24806AB /* Assets.xcassets in Resources */,
+				AB397BB61DA2F8FF00AA0E30 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		31C9F70F4A27A8787C27B47FA8EEA8E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -384,12 +424,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75CE83520E4354A0DDA4EA48A095C2A6 /* Sources */ = {
+		32CDAC4A1FE3A56D978DE9EECD943FD9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA767B695618EF08B533EA1212746C1 /* Walt-dummy.m in Sources */,
-				E686DA142811BF677483D967C6D3A0F1 /* Walt.swift in Sources */,
+				E56988AC481CB01730B6F95519E8A564 /* Walt-dummy.m in Sources */,
+				0BB17D0E38BBF7082F5BF34B1A8CF637 /* Walt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +482,6 @@
 				PRODUCT_NAME = Pods_Walt_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -522,7 +561,6 @@
 				PRODUCT_NAME = Pods_Walt_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -559,7 +597,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -608,7 +645,7 @@
 		};
 		BF9811D5747A8637C83C3BB5E15C79C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */;
+			baseConfigurationReference = 58C495166CFF4B01EE239821C15254CC /* Walt.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -667,7 +704,6 @@
 				PRODUCT_NAME = Pods_Walt_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -676,7 +712,7 @@
 		};
 		DC3E17363B5887F5CAB204FAA0DEBE1B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1371E9A72BC2C6E055A5F6487D76B7E3 /* Walt.xcconfig */;
+			baseConfigurationReference = 58C495166CFF4B01EE239821C15254CC /* Walt.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
