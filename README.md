@@ -25,7 +25,7 @@ pod "Walt"
 
 ## Author
 
-gonzalonunez, hello@gonzalonunez.me
+Gonzalo Nuñez, hello@gonzalonunez.me
 
 Twitter: [@gonzalo__nunez](https://twitter.com/gonzalo__nunez)
 
