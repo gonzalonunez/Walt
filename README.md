@@ -1,4 +1,4 @@
-![GitHub Logo](/Walt%20Icon.png)
+![Icon](/Walt%20Icon.png)
 # Walt
 
 [![CI Status](http://img.shields.io/travis/gonzalonunez/Walt.svg?style=flat)](https://travis-ci.org/gonzalonunez/Walt)
