@@ -19,6 +19,9 @@
 		A08A56EB00F5B0E9C72269D016FB8E7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
 		A72EEA53A64AD9EE9E34A1459CCDD21C /* Pods-Walt_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */; };
 		AB397BB61DA2F8FF00AA0E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */; };
+		ABCF20901DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF208F1DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift */; };
+		ABCF20921DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */; };
+		ABCF20941DA884E0006B37EC /* Roundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF20931DA884E0006B37EC /* Roundable.swift */; };
 		CBB8081058914F808118DEAE78B075D4 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BC3565A9665A488F49F2A68A9D609A5 /* Photos.framework */; };
 		D34267FFE4CD5F74F92865AECA3D1059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
 		D57535E498ECD810A0E1A0ED516639D6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090EC2915ADE5B6DEC94DF4E56E0DD3A /* QuartzCore.framework */; };
@@ -76,6 +79,9 @@
 		A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABCF208F1DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMSampleBuffer+ImageConvertible.swift"; sourceTree = "<group>"; };
+		ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+PixelBufferConvertible.swift"; sourceTree = "<group>"; };
+		ABCF20931DA884E0006B37EC /* Roundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundable.swift; sourceTree = "<group>"; };
 		BB4A7A33C6B5C5B9ED252510618E5F5C /* Pods-Walt_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Walt_Example-umbrella.h"; sourceTree = "<group>"; };
 		BF6861FB65CBAC5348D29880122DF35E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C7AE8DF94E589C707368F1151A7A483D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -186,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				A44E3A41493F00E054F4754EA8D08480 /* Walt.swift */,
+				ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */,
+				ABCF208F1DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift */,
+				ABCF20931DA884E0006B37EC /* Roundable.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -428,8 +437,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCF20921DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift in Sources */,
 				E56988AC481CB01730B6F95519E8A564 /* Walt-dummy.m in Sources */,
+				ABCF20901DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift in Sources */,
 				0BB17D0E38BBF7082F5BF34B1A8CF637 /* Walt.swift in Sources */,
+				ABCF20941DA884E0006B37EC /* Roundable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

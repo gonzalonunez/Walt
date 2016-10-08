@@ -6,146 +6,101 @@
 //
 //
 
-import Foundation
-
 import AVFoundation
-import CoreMedia
-import CoreVideo
-import ImageIO
-import MobileCoreServices
 
-//MARK: CMSampleBuffer + ImageConvertible
+public typealias MovieCompletionBlock = (URL, NSData?) -> Void
 
-public protocol ImageConvertible {
-  func toImage() -> UIImage?
+public enum MovieError: Error {
+  case noImages
+  case fileExists
 }
 
-extension CMSampleBuffer: ImageConvertible {
+public enum Walt {
   
-  public func toImage() -> UIImage? {
-    
-    guard let imageBuffer = CMSampleBufferGetImageBuffer(self) else {
-      return nil
-    }
-    
-    CVPixelBufferLockBaseAddress(imageBuffer, [])
-    
-    let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-    let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
-    
-    let width = CVPixelBufferGetWidth(imageBuffer)
-    let height = CVPixelBufferGetHeight(imageBuffer)
-    
-    let colorSpace = CGColorSpaceCreateDeviceRGB()
-    
-    guard let context = CGContext(data: baseAddress, width: width, height: height,
-                                  bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace,
-                                  bitmapInfo: CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue)
-    else {
-      return nil
-    }
-    
-    guard let cgImage = context.makeImage() else {
-      return nil
-    }
-    
-    CVPixelBufferUnlockBaseAddress(imageBuffer, [])
-    
-    return UIImage(cgImage: cgImage)
+  fileprivate static let k2500kbps = 2500 * 1000
+  fileprivate static let kVideoQueue = DispatchQueue(label: "com.ZenunSoftware.Walt.VideoQueue")
+  
+  public static func writeMovie(with images: [UIImage],
+                                loopDuration: TimeInterval,
+                                duration: Int = 10,
+                                shouldOverwrite: Bool = true,
+                                completion: @escaping MovieCompletionBlock) throws
+  {
+    let path = NSString.path(withComponents: [NSTemporaryDirectory(), "Movie.MOV"])
+    let url = URL(fileURLWithPath: path)
+    return try writeMovie(with: images, loopDuration: loopDuration, duration: duration, url: url, completion: completion)
   }
   
-}
-
-//MARK: UIImage + PixelBufferConvertible
-
-public protocol PixelBufferConvertible {
-  var pixelBufferSize: CGSize { get }
-  func toPixelBuffer() -> CVPixelBuffer?
-}
-
-extension UIImage: PixelBufferConvertible {
-  
-  public var pixelBufferSize: CGSize {
-    if size.width > 1280 || size.height > 1280 {
-      let maxRect = (size.width > size.height) ? CGRect(x: 0, y: 0, width: 720, height: 1280) : CGRect(x: 0, y: 0, width: 1280, height: 720)
-      let aspectRect = AVMakeRect(aspectRatio: size, insideRect: maxRect)
-      return aspectRect.size.rounded(to: 16)
+  public static func writeMovie(with images: [UIImage],
+                                loopDuration: TimeInterval,
+                                duration: Int = 10,
+                                url: URL,
+                                shouldOverwrite: Bool = true,
+                                completion: @escaping MovieCompletionBlock) throws
+  {
+    if images.count < 2 {
+      throw MovieError.noImages
+    }
+    
+    if (FileManager.default.fileExists(atPath: url.path) && shouldOverwrite) {
+      try FileManager.default.removeItem(atPath: url.path)
     } else {
-      return size.rounded(to: 16)
-    }
-  }
-  
-  public func toPixelBuffer() -> CVPixelBuffer? {
-    
-    defer {
-      pxBufferPtr.deinitialize()
+      throw MovieError.fileExists
     }
     
-    let options = [kCVPixelBufferCGImageCompatibilityKey as String : NSNumber(value: true),
-                   kCVPixelBufferCGBitmapContextCompatibilityKey as String : NSNumber(value: true)] as CFDictionary
+    let assetWriter = try AVAssetWriter(url: url, fileType: AVFileTypeQuickTimeMovie)
     
-    let bufferSize = pixelBufferSize
+    let frameSize = images[0].pixelBufferSize
+    let iterations = duration/Int(loopDuration)
+    let fps = images.count/Int(loopDuration)
     
-    var pxBufferPtr = UnsafeMutablePointer<CVPixelBuffer?>.allocate(capacity: 1)
-    CVPixelBufferCreate(kCFAllocatorDefault, Int(bufferSize.width), Int(bufferSize.height), kCVPixelFormatType_32ARGB, options, pxBufferPtr)
+    let outputSettings: [String : Any] = [AVVideoCodecKey: AVVideoCodecH264,
+                                          AVVideoWidthKey: frameSize.width,
+                                          AVVideoHeightKey: frameSize.height,
+                                          AVVideoScalingModeKey: AVVideoScalingModeResizeAspect,
+                                          AVVideoCompressionPropertiesKey:[AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
+                                                                           AVVideoAverageBitRateKey: Walt.k2500kbps,
+                                                                           AVVideoExpectedSourceFrameRateKey: fps]]
     
-    guard let pxBuffer = pxBufferPtr.pointee else {
-      return nil
+    let assetWriterInput = AVAssetWriterInput(mediaType: AVMediaTypeVideo, outputSettings: outputSettings)
+    assetWriterInput.expectsMediaDataInRealTime = true
+    
+    let attributes: [String : Any] = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32ARGB),
+                                      kCVPixelBufferWidthKey as String: frameSize.width,
+                                      kCVPixelBufferHeightKey as String: frameSize.height,
+                                      kCVPixelFormatCGBitmapContextCompatibility as String: true,
+                                      kCVPixelFormatCGImageCompatibility as String: true]
+    
+    let adaptor = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: assetWriterInput, sourcePixelBufferAttributes: attributes)
+    
+    assetWriter.add(assetWriterInput)
+    assetWriter.startWriting()
+    assetWriter.startSession(atSourceTime: kCMTimeZero)
+    
+    var pxBufferIndex = 0
+    var dropped = 0
+    
+    assetWriterInput.requestMediaDataWhenReady(on: Walt.kVideoQueue) {
+      
+      while assetWriterInput.isReadyForMoreMediaData {
+        
+        if let pxBuffer = images[pxBufferIndex].toPixelBuffer() {
+          adaptor.append(pxBuffer, withPresentationTime: CMTime(seconds: Double(pxBufferIndex), preferredTimescale: CMTimeScale(fps)))
+        }
+        
+        if pxBufferIndex == images.count {
+          assetWriterInput.markAsFinished()
+          assetWriter.finishWriting {
+            DispatchQueue.main.async {
+              let data = NSData(contentsOf: url)
+              completion(url, data)
+            }
+          }
+        }
+        pxBufferIndex += 1
+      }
+      
     }
-    
-    CVPixelBufferLockBaseAddress(pxBuffer, [])
-    
-    let baseAddress = CVPixelBufferGetBaseAddress(pxBuffer)
-    let bytesPerRow = bufferSize.width*4
-    let colorSpace = CGColorSpaceCreateDeviceRGB()
-    
-    guard let context = CGContext(data: baseAddress, width: Int(bufferSize.width), height: Int(bufferSize.height),
-                                  bitsPerComponent: 8, bytesPerRow: Int(bytesPerRow), space: colorSpace,
-                                  bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue)
-    else {
-        return nil
-    }
-    
-    guard let cgImage = cgImage else {
-      return nil
-    }
-    
-    let rect = CGRect(origin: .zero, size: bufferSize)
-    
-    context.setFillColor(UIColor.white.cgColor)
-    context.fill(rect)
-    context.interpolationQuality = .high
-    
-    context.draw(cgImage, in: rect)
-    
-    CVPixelBufferUnlockBaseAddress(pxBuffer, [])
-    
-    return pxBuffer
-  }
-  
-}
-
-//MARK: Helpers
-
-protocol Roundable {
-  associatedtype RoundableData
-  func rounded(to r: RoundableData) -> Self
-}
-
-extension CGFloat: Roundable {
-  typealias RoundableData = CGFloat
-  
-  func rounded(to r: RoundableData) -> CGFloat {
-    return r * floor((self/r)+0.5)
-  }
-  
-}
-
-extension CGSize: Roundable {
-  typealias RoundableData = CGFloat
-
-  func rounded(to r: RoundableData) -> CGSize {
-    return CGSize(width: width.rounded(to: r), height: height.rounded(to: r))
   }
   
 }
