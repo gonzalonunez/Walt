@@ -40,7 +40,7 @@ public struct GifWritingOptions {
   var skipsFailedImages: Bool
   
   public init(duration: TimeInterval, scale: CGFloat = 1, gifLoop: GifLoop = .infinite,
-       shouldOverwrite: Bool = true, qos: DispatchQoS.QoSClass = .default, skipsFailedImages: Bool = true)
+              shouldOverwrite: Bool = true, qos: DispatchQoS.QoSClass = .default, skipsFailedImages: Bool = true)
   {
     self.duration = duration
     self.scale = scale
@@ -79,10 +79,12 @@ public enum Walt {
       throw WaltError.durationZero
     }
     
-    if (FileManager.default.fileExists(atPath: url.path) && options.shouldOverwrite) {
-      try FileManager.default.removeItem(atPath: url.path)
-    } else {
-      throw WaltError.fileExists
+    if (FileManager.default.fileExists(atPath: url.path)) {
+      if options.shouldOverwrite {
+        try FileManager.default.removeItem(atPath: url.path)
+      } else {
+        throw WaltError.fileExists
+      }
     }
     
     let assetWriter = try AVAssetWriter(url: url, fileType: AVFileTypeQuickTimeMovie)
@@ -173,10 +175,12 @@ public enum Walt {
       throw WaltError.durationZero
     }
     
-    if (FileManager.default.fileExists(atPath: url.path) && options.shouldOverwrite) {
-      try FileManager.default.removeItem(atPath: url.path)
-    } else {
-      throw WaltError.fileExists
+    if (FileManager.default.fileExists(atPath: url.path)) {
+      if options.shouldOverwrite {
+        try FileManager.default.removeItem(atPath: url.path)
+      } else {
+        throw WaltError.fileExists
+      }
     }
     
     DispatchQueue.global(qos: .userInitiated).async {
