@@ -24,7 +24,7 @@ public struct MovieWritingOptions {
   var duration: Int
   var shouldOverwrite: Bool
   
-  init(loopDuration: TimeInterval, duration: Int = 10, shouldOverwrite: Bool = true) {
+  public init(loopDuration: TimeInterval, duration: Int = 10, shouldOverwrite: Bool = true) {
     self.loopDuration = loopDuration
     self.duration = duration
     self.shouldOverwrite = shouldOverwrite
@@ -39,7 +39,7 @@ public struct GifWritingOptions {
   var qos: DispatchQoS.QoSClass
   var skipsFailedImages: Bool
   
-  init(duration: TimeInterval, scale: CGFloat = 1, gifLoop: GifLoop = .infinite,
+  public init(duration: TimeInterval, scale: CGFloat = 1, gifLoop: GifLoop = .infinite,
        shouldOverwrite: Bool = true, qos: DispatchQoS.QoSClass = .default, skipsFailedImages: Bool = true)
   {
     self.duration = duration
