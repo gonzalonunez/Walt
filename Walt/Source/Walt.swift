@@ -8,7 +8,7 @@
 
 import AVFoundation
 
-public typealias MovieCompletionBlock = (URL, NSData?) -> Void
+public typealias MovieCompletionBlock = (URL, Data?) -> Void
 
 public enum MovieError: Error {
   case noImages
@@ -92,7 +92,7 @@ public enum Walt {
           assetWriterInput.markAsFinished()
           assetWriter.finishWriting {
             DispatchQueue.main.async {
-              let data = NSData(contentsOf: url)
+              let data = try? Data(contentsOf: url)
               completion(url, data)
             }
           }
@@ -104,4 +104,3 @@ public enum Walt {
   }
   
 }
-
