@@ -78,14 +78,15 @@ public enum Walt {
     assetWriter.startSession(atSourceTime: kCMTimeZero)
     
     var pxBufferIndex = 0
-    var dropped = 0
     
     assetWriterInput.requestMediaDataWhenReady(on: Walt.kVideoQueue) {
       
       while assetWriterInput.isReadyForMoreMediaData {
         
-        if let pxBuffer = images[pxBufferIndex].toPixelBuffer() {
-          adaptor.append(pxBuffer, withPresentationTime: CMTime(seconds: Double(pxBufferIndex), preferredTimescale: CMTimeScale(fps)))
+        if pxBufferIndex < images.count {
+          if let pxBuffer = images[pxBufferIndex].toPixelBuffer() {
+            adaptor.append(pxBuffer, withPresentationTime: CMTime(seconds: Double(pxBufferIndex), preferredTimescale: CMTimeScale(fps)))
+          }
         }
         
         if pxBufferIndex == images.count {
@@ -97,6 +98,7 @@ public enum Walt {
             }
           }
         }
+        
         pxBufferIndex += 1
       }
       
