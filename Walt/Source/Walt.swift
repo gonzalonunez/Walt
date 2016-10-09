@@ -228,9 +228,18 @@ public enum Walt {
         }
         
         CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
+        
+        
       }
       
       CGImageDestinationFinalize(destination)
+      
+      let data = try? Data(contentsOf: url)
+      
+      DispatchQueue.main.async {
+        completion(url, data)
+      }
+            
     }
   }
   
