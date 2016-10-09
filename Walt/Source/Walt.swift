@@ -54,6 +54,13 @@ public enum Walt {
     let iterations = duration/Int(loopDuration)
     let fps = images.count/Int(loopDuration)
     
+    var finalVideoArray = [UIImage]()
+    for i in 0...iterations {
+      for image in images {
+        finalVideoArray.append(image)
+      }
+    }
+    
     let outputSettings: [String : Any] = [AVVideoCodecKey: AVVideoCodecH264,
                                           AVVideoWidthKey: frameSize.width,
                                           AVVideoHeightKey: frameSize.height,
@@ -83,13 +90,13 @@ public enum Walt {
       
       while assetWriterInput.isReadyForMoreMediaData {
         
-        if pxBufferIndex < images.count {
-          if let pxBuffer = images[pxBufferIndex].toPixelBuffer() {
+        if pxBufferIndex < finalVideoArray.count {
+          if let pxBuffer = finalVideoArray[pxBufferIndex].toPixelBuffer() {
             adaptor.append(pxBuffer, withPresentationTime: CMTime(seconds: Double(pxBufferIndex), preferredTimescale: CMTimeScale(fps)))
           }
         }
         
-        if pxBufferIndex == images.count {
+        if pxBufferIndex == finalVideoArray.count {
           assetWriterInput.markAsFinished()
           assetWriter.finishWriting {
             DispatchQueue.main.async {
