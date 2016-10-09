@@ -6,7 +6,9 @@
 [![License](https://img.shields.io/cocoapods/l/Walt.svg?style=flat)](http://cocoapods.org/pods/Walt)
 [![Platform](https://img.shields.io/cocoapods/p/Walt.svg?style=flat)](http://cocoapods.org/pods/Walt)
 
-Aptly named after one of the greatest animators of all time, Walt is part of a larger effort to open source [Giffy](https://appsto.re/us/gSgd2.i).
+Aptly named after one of the greatest animators of all time, Walt can turn a series of images into a gif or a video!
+
+Walt is part of a larger effort to open source [Giffy](https://appsto.re/us/gSgd2.i).
 
 ## Installation
 
