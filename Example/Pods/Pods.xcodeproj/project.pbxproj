@@ -19,6 +19,7 @@
 		A08A56EB00F5B0E9C72269D016FB8E7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF8692DF3BAC3D76F2460FC08CC9FAE /* Foundation.framework */; };
 		A72EEA53A64AD9EE9E34A1459CCDD21C /* Pods-Walt_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 163BC91841FA744C201E05A4FC16351A /* Pods-Walt_Tests-dummy.m */; };
 		AB397BB61DA2F8FF00AA0E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */; };
+		ABC877FC1DAA16740015B959 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC877FB1DAA16740015B959 /* Options.swift */; };
 		ABCF20901DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF208F1DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift */; };
 		ABCF20921DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */; };
 		ABCF20941DA884E0006B37EC /* Roundable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCF20931DA884E0006B37EC /* Roundable.swift */; };
@@ -81,6 +82,7 @@
 		A9613ACE1E8DD223AAB79A10857056AF /* Pods-Walt_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AADD811EA402A85841800E135751661B /* Pods-Walt_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Walt_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AB397BB41DA2F8FF00AA0E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ABC877FB1DAA16740015B959 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		ABCF208F1DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CMSampleBuffer+ImageConvertible.swift"; sourceTree = "<group>"; };
 		ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+PixelBufferConvertible.swift"; sourceTree = "<group>"; };
 		ABCF20931DA884E0006B37EC /* Roundable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roundable.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				A44E3A41493F00E054F4754EA8D08480 /* Walt.swift */,
+				ABC877FB1DAA16740015B959 /* Options.swift */,
 				ABCF20951DA9FD07006B37EC /* GifLoop.swift */,
 				ABCF20971DAA02AD006B37EC /* CGSize+Scalable.swift */,
 				ABCF20911DA8846F006B37EC /* UIImage+PixelBufferConvertible.swift */,
@@ -447,6 +450,7 @@
 				E56988AC481CB01730B6F95519E8A564 /* Walt-dummy.m in Sources */,
 				ABCF20961DA9FD07006B37EC /* GifLoop.swift in Sources */,
 				ABCF20901DA8841F006B37EC /* CMSampleBuffer+ImageConvertible.swift in Sources */,
+				ABC877FC1DAA16740015B959 /* Options.swift in Sources */,
 				0BB17D0E38BBF7082F5BF34B1A8CF637 /* Walt.swift in Sources */,
 				ABCF20981DAA02AD006B37EC /* CGSize+Scalable.swift in Sources */,
 				ABCF20941DA884E0006B37EC /* Roundable.swift in Sources */,

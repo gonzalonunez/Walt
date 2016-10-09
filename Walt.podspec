@@ -32,5 +32,5 @@ A Swift 3 library for creating gifs/videos from a series of images.
   s.source_files = 'Walt/Source/**/*'
   s.resources = 'Walt/Assets/**/*'
 
-  s.frameworks = 'UIKit', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'ImageIO', 'MobileCoreServices', 'Photos', 'QuartzCore'
+  s.frameworks = 'UIKit', 'AVFoundation', 'CoreGraphics', 'CoreMedia', 'ImageIO', 'MobileCoreServices', 'QuartzCore'
 end
