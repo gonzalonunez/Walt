@@ -147,7 +147,6 @@ public enum Walt {
         
         pxBufferIndex += 1
       }
-      
     }
   }
   
@@ -228,8 +227,6 @@ public enum Walt {
         }
         
         CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
-        
-        
       }
       
       CGImageDestinationFinalize(destination)
@@ -239,7 +236,6 @@ public enum Walt {
       DispatchQueue.main.async {
         completion(url, data)
       }
-            
     }
   }
   
