@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-A Swift 3 library for creating gifs/videos from a series of images.
+Walt is a Swift 3 library for creating gifs/videos from a series of images.
                        DESC
 
   s.homepage         = 'https://github.com/gonzalonunez/Walt'

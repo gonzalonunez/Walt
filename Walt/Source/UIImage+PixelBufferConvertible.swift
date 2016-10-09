@@ -37,7 +37,7 @@ extension UIImage: PixelBufferConvertible {
     
     let bufferSize = pixelBufferSize
     
-    var pxBufferPtr = UnsafeMutablePointer<CVPixelBuffer?>.allocate(capacity: 1)
+    let pxBufferPtr = UnsafeMutablePointer<CVPixelBuffer?>.allocate(capacity: 1)
     CVPixelBufferCreate(kCFAllocatorDefault, Int(bufferSize.width), Int(bufferSize.height), kCVPixelFormatType_32ARGB, options, pxBufferPtr)
     
     guard let pxBuffer = pxBufferPtr.pointee else {
