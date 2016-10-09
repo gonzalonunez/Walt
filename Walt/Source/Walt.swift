@@ -51,8 +51,8 @@ public enum Walt {
     let assetWriter = try AVAssetWriter(url: url, fileType: AVFileTypeQuickTimeMovie)
     
     let frameSize = images[0].pixelBufferSize
-    let iterations = duration/Int(loopDuration)
-    let fps = images.count/Int(loopDuration)
+    let iterations = Int(ceil(Double(duration)/loopDuration))
+    let fps = Int(ceil(Double(images.count)/loopDuration))
     
     var finalVideoArray = [UIImage]()
     for i in 0...iterations {
@@ -92,7 +92,7 @@ public enum Walt {
         
         if pxBufferIndex < finalVideoArray.count {
           if let pxBuffer = finalVideoArray[pxBufferIndex].toPixelBuffer() {
-            adaptor.append(pxBuffer, withPresentationTime: CMTime(seconds: Double(pxBufferIndex), preferredTimescale: CMTimeScale(fps)))
+            adaptor.append(pxBuffer, withPresentationTime: CMTime(value: CMTimeValue(pxBufferIndex), timescale: CMTimeScale(fps)))
           }
         }
         
