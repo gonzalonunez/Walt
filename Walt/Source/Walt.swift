@@ -197,8 +197,10 @@ public enum Walt {
       let delayTimes = [kCGImagePropertyGIFUnclampedDelayTime as String: desiredFrameDuration,
                         kCGImagePropertyGIFDelayTime as String: clampedFrameDuration]
       
-      let frameProperties = [kCGImagePropertyGIFDictionary as String: delayTimes]
       let gifProperties = [kCGImagePropertyGIFDictionary as String: options.gifLoop.dict]
+      CGImageDestinationSetProperties(destination, gifProperties as CFDictionary)
+      
+      let frameProperties = [kCGImagePropertyGIFDictionary as String: delayTimes]
       
       let first = images.first!
       let scaledSize = first.size.scaled(by: options.scale)
@@ -228,7 +230,6 @@ public enum Walt {
         CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
       }
       
-      CGImageDestinationSetProperties(destination, gifProperties as CFDictionary)
       CGImageDestinationFinalize(destination)
     }
   }
