@@ -8,51 +8,88 @@
 
 import AVFoundation
 
-public typealias MovieCompletionBlock = (URL, Data?) -> Void
+import ImageIO
+import MobileCoreServices
 
-public enum MovieError: Error {
+public typealias DataCompletionBlock = (URL, Data?) -> Void
+
+public enum WaltError: Error {
   case noImages
+  case durationZero
   case fileExists
 }
 
+public struct MovieWritingOptions {
+  var loopDuration: TimeInterval
+  var duration: Int
+  var shouldOverwrite: Bool
+  
+  init(loopDuration: TimeInterval, duration: Int = 10, shouldOverwrite: Bool = true) {
+    self.loopDuration = loopDuration
+    self.duration = duration
+    self.shouldOverwrite = shouldOverwrite
+  }
+}
+
+public struct GifWritingOptions {
+  var duration: TimeInterval
+  var scale: CGFloat
+  var gifLoop: GifLoop
+  var shouldOverwrite: Bool
+  var qos: DispatchQoS.QoSClass
+  var skipsFailedImages: Bool
+  
+  init(duration: TimeInterval, scale: CGFloat = 1, gifLoop: GifLoop = .infinite,
+       shouldOverwrite: Bool = true, qos: DispatchQoS.QoSClass = .default, skipsFailedImages: Bool = true)
+  {
+    self.duration = duration
+    self.scale = scale
+    self.gifLoop = gifLoop
+    self.shouldOverwrite = shouldOverwrite
+    self.qos = qos
+    self.skipsFailedImages = skipsFailedImages
+  }
+}
+
 public enum Walt {
+  
+  //MARK: Movies
   
   fileprivate static let k2500kbps = 2500 * 1000
   fileprivate static let kVideoQueue = DispatchQueue(label: "com.ZenunSoftware.Walt.VideoQueue")
   
   public static func writeMovie(with images: [UIImage],
-                                loopDuration: TimeInterval,
-                                duration: Int = 10,
-                                shouldOverwrite: Bool = true,
-                                completion: @escaping MovieCompletionBlock) throws
+                                options: MovieWritingOptions,
+                                completion: @escaping DataCompletionBlock) throws
   {
-    let path = NSString.path(withComponents: [NSTemporaryDirectory(), "Movie.MOV"])
-    let url = URL(fileURLWithPath: path)
-    return try writeMovie(with: images, loopDuration: loopDuration, duration: duration, url: url, completion: completion)
+    let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("com-ZenunSoftware-Walt-Movie.MOV")
+    return try writeMovie(with: images, options: options, url: url, completion: completion)
   }
   
   public static func writeMovie(with images: [UIImage],
-                                loopDuration: TimeInterval,
-                                duration: Int = 10,
+                                options: MovieWritingOptions,
                                 url: URL,
-                                shouldOverwrite: Bool = true,
-                                completion: @escaping MovieCompletionBlock) throws
+                                completion: @escaping DataCompletionBlock) throws
   {
     if images.count < 2 {
-      throw MovieError.noImages
+      throw WaltError.noImages
     }
     
-    if (FileManager.default.fileExists(atPath: url.path) && shouldOverwrite) {
+    if options.loopDuration == 0 || options.duration == 0 {
+      throw WaltError.durationZero
+    }
+    
+    if (FileManager.default.fileExists(atPath: url.path) && options.shouldOverwrite) {
       try FileManager.default.removeItem(atPath: url.path)
     } else {
-      throw MovieError.fileExists
+      throw WaltError.fileExists
     }
     
     let assetWriter = try AVAssetWriter(url: url, fileType: AVFileTypeQuickTimeMovie)
     
     let frameSize = images[0].pixelBufferSize
-    let iterations = Int(ceil(Double(duration)/loopDuration))
-    let fps = Int(ceil(Double(images.count)/loopDuration))
+    let iterations = Int(ceil(Double(options.duration)/options.loopDuration))
+    let fps = Int(ceil(Double(images.count)/options.loopDuration))
     
     var finalVideoArray = [UIImage]()
     for i in 0...iterations {
@@ -65,9 +102,9 @@ public enum Walt {
                                           AVVideoWidthKey: frameSize.width,
                                           AVVideoHeightKey: frameSize.height,
                                           AVVideoScalingModeKey: AVVideoScalingModeResizeAspect,
-                                          AVVideoCompressionPropertiesKey:[AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
-                                                                           AVVideoAverageBitRateKey: Walt.k2500kbps,
-                                                                           AVVideoExpectedSourceFrameRateKey: fps]]
+                                          AVVideoCompressionPropertiesKey: [AVVideoProfileLevelKey: AVVideoProfileLevelH264HighAutoLevel,
+                                                                            AVVideoAverageBitRateKey: Walt.k2500kbps,
+                                                                            AVVideoExpectedSourceFrameRateKey: fps]]
     
     let assetWriterInput = AVAssetWriterInput(mediaType: AVMediaTypeVideo, outputSettings: outputSettings)
     assetWriterInput.expectsMediaDataInRealTime = true
@@ -109,6 +146,86 @@ public enum Walt {
         pxBufferIndex += 1
       }
       
+    }
+  }
+  
+  //MARK: Gifs
+  
+  public static func createGif(with images: [UIImage],
+                               options: GifWritingOptions,
+                               completion: @escaping DataCompletionBlock) throws
+  {
+    let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("com-ZenunSoftware-Walt-Gif.gif")
+    return try createGif(with: images, options: options, url: url, completion: completion)
+  }
+
+  
+  public static func createGif(with images: [UIImage],
+                               options: GifWritingOptions,
+                               url: URL,
+                               completion: @escaping DataCompletionBlock) throws
+  {
+    if images.count < 2 {
+      throw WaltError.noImages
+    }
+    
+    if options.duration == 0 {
+      throw WaltError.durationZero
+    }
+    
+    if (FileManager.default.fileExists(atPath: url.path) && options.shouldOverwrite) {
+      try FileManager.default.removeItem(atPath: url.path)
+    } else {
+      throw WaltError.fileExists
+    }
+    
+    DispatchQueue.global(qos: .userInitiated).async {
+      guard let destination = CGImageDestinationCreateWithURL(url as CFURL, kUTTypeGIF, images.count, nil) else {
+        DispatchQueue.main.async {
+          completion(url, nil)
+        }
+        return
+      }
+      
+      let desiredFrameDuration = options.duration/Double(images.count)
+      let clampedFrameDuration = max(0.1, desiredFrameDuration)
+      
+      let delayTimes = [kCGImagePropertyGIFUnclampedDelayTime as String: desiredFrameDuration,
+                        kCGImagePropertyGIFDelayTime as String: clampedFrameDuration]
+      
+      let frameProperties = [kCGImagePropertyGIFDictionary as String: delayTimes]
+      let gifProperties = [kCGImagePropertyGIFDictionary as String: options.gifLoop.dict]
+      
+      let first = images.first!
+      let scaledSize = first.size.scaled(by: options.scale)
+      
+      for image in images {
+        UIGraphicsBeginImageContext(scaledSize)
+        
+        defer {
+          UIGraphicsEndImageContext()
+        }
+        
+        let rect = CGRect(origin: .zero, size: scaledSize)
+        image.draw(in: rect)
+        
+        guard let cgImage = UIGraphicsGetImageFromCurrentImageContext()?.cgImage else {
+          if options.skipsFailedImages {
+            continue
+          }
+          
+          DispatchQueue.main.async {
+            completion(url, nil)
+          }
+          
+          return
+        }
+        
+        CGImageDestinationAddImage(destination, cgImage, frameProperties as CFDictionary)
+      }
+      
+      CGImageDestinationSetProperties(destination, gifProperties as CFDictionary)
+      CGImageDestinationFinalize(destination)
     }
   }
   
