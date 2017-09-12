@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Walt'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A Swift 3 library for creating gifs/videos from a series of images.'
 
 # This description is used to generate tags and improve search results.
