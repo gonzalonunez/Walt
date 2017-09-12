@@ -1,0 +1,6 @@
+framework module Walt {
+  umbrella header "Walt-umbrella.h"
+
+  export *
+  module * { export * }
+}

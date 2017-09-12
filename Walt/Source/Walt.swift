@@ -62,7 +62,7 @@ public enum Walt {
     let fps = Int(ceil(Double(images.count)/options.loopDuration))
     
     var finalVideoArray = [UIImage]()
-    for _ in 0...iterations {
+    for _ in 0..<iterations {
       for image in images {
         finalVideoArray.append(image)
       }

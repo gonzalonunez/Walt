@@ -28,17 +28,23 @@ extension UIImage: PixelBufferConvertible {
   
   public func toPixelBuffer() -> CVPixelBuffer? {
     
-    defer {
-      pxBufferPtr.deinitialize()
-    }
-    
     let options = [kCVPixelBufferCGImageCompatibilityKey as String : NSNumber(value: true),
                    kCVPixelBufferCGBitmapContextCompatibilityKey as String : NSNumber(value: true)] as CFDictionary
     
     let bufferSize = pixelBufferSize
     
     let pxBufferPtr = UnsafeMutablePointer<CVPixelBuffer?>.allocate(capacity: 1)
-    CVPixelBufferCreate(kCFAllocatorDefault, Int(bufferSize.width), Int(bufferSize.height), kCVPixelFormatType_32ARGB, options, pxBufferPtr)
+    
+    defer {
+      pxBufferPtr.deinitialize()
+    }
+    
+    CVPixelBufferCreate(
+      kCFAllocatorDefault,
+      Int(bufferSize.width),
+      Int(bufferSize.height),
+      kCVPixelFormatType_32ARGB,
+      options, pxBufferPtr)
     
     guard let pxBuffer = pxBufferPtr.pointee else {
       return nil
