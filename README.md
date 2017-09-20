@@ -29,6 +29,10 @@ target '<MY_TARGET_NAME>' do
 end
 ``````
 
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
 ## Author
 
 Gonzalo Nuñez, hello@gonzalonunez.me
